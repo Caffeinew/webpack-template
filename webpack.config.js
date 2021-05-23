@@ -6,13 +6,14 @@ module.exports = {
   mode: "production",
   target: "web",
   output: {
+    filename: "[contenthash].bundle.js",
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "assets/[hash][ext][query]",
   },
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif|webp|svg)/i,
+        test: /\.(png|jpe?g|gif|webp|svg)$/i,
         type: "asset",
       },
       {
